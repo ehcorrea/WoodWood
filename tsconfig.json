@@ -3,7 +3,7 @@
     "strict": true,
     "jsx": "react-jsx",
     "noImplicitAny": true,
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
       "@/*": [
         "./src/*"

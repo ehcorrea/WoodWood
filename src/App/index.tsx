@@ -1,12 +1,12 @@
 import { ThemeProvider } from '@emotion/react';
-import { NewAppScreen } from '@react-native/new-app-screen';
 
 import { THEME } from '../shared/constants/theme';
+import Navigation from '../navigators/RootNavigator';
 
 function App() {
   return (
     <ThemeProvider theme={THEME}>
-      <NewAppScreen templateFileName="App.tsx" />
+      <Navigation />;
     </ThemeProvider>
   );
 }
