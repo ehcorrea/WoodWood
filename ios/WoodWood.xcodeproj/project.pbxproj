@@ -9,9 +9,14 @@
 /* Begin PBXBuildFile section */
 		0C80B921A6F3F58F76C31292 /* libPods-WoodWood.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-WoodWood.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		16117951EA14420C897849F6 /* SofiaPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 147A542B15B548E1BF57F49C /* SofiaPro-Bold.otf */; };
+		2139BE76F09C493F82CFC712 /* SofiaPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D15C7B57C9324A799A7F8150 /* SofiaPro-Regular.otf */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A449B8D71038C393A94384A7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		A5200D09512C4BDC8C99FB91 /* SofiaPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B232116C150E42A3B8E0B95E /* SofiaPro-Medium.otf */; };
+		B8858B3B4D2943318874F480 /* SofiaPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F81DCF6CC4642D8BF36D9C8 /* SofiaPro-Light.otf */; };
+		E679FF6B1746423C83CD0DA0 /* SofiaPro-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CACB6C2A24A3F894F1BFF /* SofiaPro-SemiBold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,11 +24,16 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = WoodWood/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WoodWood/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = WoodWood/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		147A542B15B548E1BF57F49C /* SofiaPro-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SofiaPro-Bold.otf"; path = "../src/assets/fonts/SofiaPro-Bold.otf"; sourceTree = "<group>"; };
+		2F81DCF6CC4642D8BF36D9C8 /* SofiaPro-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SofiaPro-Light.otf"; path = "../src/assets/fonts/SofiaPro-Light.otf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-WoodWood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WoodWood.debug.xcconfig"; path = "Target Support Files/Pods-WoodWood/Pods-WoodWood.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-WoodWood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WoodWood.release.xcconfig"; path = "Target Support Files/Pods-WoodWood/Pods-WoodWood.release.xcconfig"; sourceTree = "<group>"; };
+		5A6CACB6C2A24A3F894F1BFF /* SofiaPro-SemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SofiaPro-SemiBold.otf"; path = "../src/assets/fonts/SofiaPro-SemiBold.otf"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-WoodWood.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WoodWood.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = WoodWood/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = WoodWood/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B232116C150E42A3B8E0B95E /* SofiaPro-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SofiaPro-Medium.otf"; path = "../src/assets/fonts/SofiaPro-Medium.otf"; sourceTree = "<group>"; };
+		D15C7B57C9324A799A7F8150 /* SofiaPro-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SofiaPro-Regular.otf"; path = "../src/assets/fonts/SofiaPro-Regular.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -60,6 +70,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3C0D46F91B924CFB93848CAA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				147A542B15B548E1BF57F49C /* SofiaPro-Bold.otf */,
+				2F81DCF6CC4642D8BF36D9C8 /* SofiaPro-Light.otf */,
+				B232116C150E42A3B8E0B95E /* SofiaPro-Medium.otf */,
+				D15C7B57C9324A799A7F8150 /* SofiaPro-Regular.otf */,
+				5A6CACB6C2A24A3F894F1BFF /* SofiaPro-SemiBold.otf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +98,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				3C0D46F91B924CFB93848CAA /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -161,6 +185,11 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				A449B8D71038C393A94384A7 /* PrivacyInfo.xcprivacy in Resources */,
+				16117951EA14420C897849F6 /* SofiaPro-Bold.otf in Resources */,
+				B8858B3B4D2943318874F480 /* SofiaPro-Light.otf in Resources */,
+				A5200D09512C4BDC8C99FB91 /* SofiaPro-Medium.otf in Resources */,
+				2139BE76F09C493F82CFC712 /* SofiaPro-Regular.otf in Resources */,
+				E679FF6B1746423C83CD0DA0 /* SofiaPro-SemiBold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,13 +220,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WoodWood/Pods-WoodWood-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WoodWood/Pods-WoodWood-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -234,13 +259,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WoodWood/Pods-WoodWood-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WoodWood/Pods-WoodWood-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
