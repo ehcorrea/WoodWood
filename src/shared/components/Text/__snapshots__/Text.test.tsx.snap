@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text/> quando Subtitle renderizado 1`] = `
+<Text
+  size="large"
+  style={
+    [
+      {
+        "color": "#1A1D26",
+        "fontFamily": "SofiaPro-SemiBold",
+        "fontSize": 25.5,
+        "lineHeight": 28.5,
+      },
+      undefined,
+    ]
+  }
+  weight="semibold"
+>
+  Mocked Text
+</Text>
+`;
+
+exports[`<Text/> quando Title renderizado 1`] = `
+<Text
+  size="huge"
+  style={
+    [
+      {
+        "color": "#1A1D26",
+        "fontFamily": "SofiaPro-Bold",
+        "fontSize": 43,
+        "lineHeight": 71.5,
+      },
+      undefined,
+    ]
+  }
+  weight="bold"
+>
+  Mocked Text
+</Text>
+`;
+
+exports[`<Text/> quando default redenrizado com customSize 1`] = `
+<Text
+  customSize={30}
+  style={
+    [
+      {
+        "color": "#1A1D26",
+        "fontFamily": "SofiaPro-Regular",
+        "fontSize": 21.5,
+        "lineHeight": 25.5,
+      },
+      undefined,
+    ]
+  }
+>
+  Mocked Text
+</Text>
+`;
+
+exports[`<Text/> quando default redenrizado com height 1`] = `
+<Text
+  height={30}
+  style={
+    [
+      {
+        "color": "#1A1D26",
+        "fontFamily": "SofiaPro-Regular",
+        "fontSize": 21.5,
+        "lineHeight": 25.5,
+      },
+      undefined,
+    ]
+  }
+>
+  Mocked Text
+</Text>
+`;
+
+exports[`<Text/> quando default redenrizado sem props customizadas 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#1A1D26",
+        "fontFamily": "SofiaPro-Regular",
+        "fontSize": 21.5,
+        "lineHeight": 25.5,
+      },
+      undefined,
+    ]
+  }
+>
+  Mocked Text
+</Text>
+`;
