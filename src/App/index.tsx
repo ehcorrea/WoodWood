@@ -6,7 +6,7 @@ import Navigation from '../navigators/RootNavigator';
 function App() {
   return (
     <ThemeProvider theme={THEME}>
-      <Navigation />;
+      <Navigation />
     </ThemeProvider>
   );
 }
