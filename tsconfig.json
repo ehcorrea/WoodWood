@@ -3,16 +3,17 @@
     "strict": true,
     "jsx": "react-jsx",
     "noImplicitAny": true,
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"],
     }
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "src/@types/expo-env.d.ts",
     "commitlint.config.js",
+    "expo-env.d.ts"
   ]
 }
