@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Provider/> quando renderizado com children 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#1A1D26",
+        "fontFamily": "SofiaPro-Regular",
+        "fontSize": 21.5,
+        "lineHeight": 25.5,
+      },
+      undefined,
+    ]
+  }
+>
+  Mocked Text
+</Text>
+`;
+
+exports[`<Provider/> quando renderizado sem children 1`] = `null`;
