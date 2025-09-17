@@ -1,6 +1,6 @@
 import { fireEvent } from '@testing-library/react-native';
 
-import { render } from '../../../../test/utils';
+import { render } from '@/test/utils';
 
 import { SearchBar } from './SearchBar';
 

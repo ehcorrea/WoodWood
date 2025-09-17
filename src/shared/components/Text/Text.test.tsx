@@ -1,4 +1,4 @@
-import { render } from '../../../test/utils';
+import { render } from '@/test/utils';
 import { Text, TextProps } from './Text';
 
 const MOCKED_TEXT = 'Mocked Text';

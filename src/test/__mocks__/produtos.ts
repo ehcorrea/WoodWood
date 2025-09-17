@@ -1,4 +1,4 @@
-import { Produto } from '../api/types';
+import { Produto } from '../../services/api';
 
 export const MOCKED_PRODUTOS: Produto[] = [
   {

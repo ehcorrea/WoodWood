@@ -1,10 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
 import { useEffect } from 'react';
 import { Alert } from 'react-native';
-import { listarProdutos } from '../../api/api';
+
+import { listarProdutos } from '@/services/api';
 
 export function useListarProdutos() {
-  const { data, isFetching, refetch, isError } = useQuery({
+  const { data, isLoading, refetch, isError } = useQuery({
     queryKey: ['listarProdutos'],
     queryFn: listarProdutos,
   });
@@ -18,5 +19,5 @@ export function useListarProdutos() {
     }
   }, [isError]);
 
-  return { produtos: data, isLoading: isFetching };
+  return { produtos: data, isLoading };
 }
