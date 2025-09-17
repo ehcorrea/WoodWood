@@ -1,13 +1,11 @@
-import { ThemeProvider } from '@emotion/react';
-
-import { THEME } from '../shared/constants/theme';
 import Navigation from '../navigators/RootNavigator';
+import { Provider } from '../shared/components';
 
 function App() {
   return (
-    <ThemeProvider theme={THEME}>
+    <Provider>
       <Navigation />
-    </ThemeProvider>
+    </Provider>
   );
 }
 
