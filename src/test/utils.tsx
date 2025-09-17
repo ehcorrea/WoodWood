@@ -5,8 +5,13 @@ import {
   RenderOptions,
 } from '@testing-library/react-native';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+export { renderHook } from '@testing-library/react-native';
 
 import { THEME } from '../shared/constants/theme';
+
+QueryClient.prototype.prefetchQuery = jest.fn();
+QueryClient.prototype.invalidateQueries = jest.fn();
+QueryClient.prototype.removeQueries = jest.fn();
 
 export const queryClient = new QueryClient({
   defaultOptions: {
@@ -40,3 +45,15 @@ export const render = (
     ...options,
   });
 };
+
+export function sleep(duration: number) {
+  return new Promise((resolve) => setTimeout(resolve, duration));
+}
+
+beforeEach(() => {
+  jest.clearAllMocks();
+});
+
+afterEach(() => {
+  queryClient.clear();
+});
