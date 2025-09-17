@@ -9,5 +9,6 @@ module.exports = {
   rules: {
     'no-console': 'warn',
     'react/display-name': 'off',
+    '@typescript-eslint/no-require-imports': 'off',
   },
 };

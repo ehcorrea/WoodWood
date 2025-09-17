@@ -1,3 +1,7 @@
+if (__DEV__) {
+  require('../../Reactotron.config');
+}
+
 import Navigation from '../navigators/RootNavigator';
 import { Provider } from '../shared/components';
 
