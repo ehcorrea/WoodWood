@@ -14,3 +14,7 @@ export const MOCKED_PRODUTOS: Produto[] = [
     title: 'mocked-title',
   },
 ];
+
+export const criarMockProduto = (produto?: Partial<Produto>) => {
+  return { ...MOCKED_PRODUTOS[0], ...produto };
+};

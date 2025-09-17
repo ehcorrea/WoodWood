@@ -41,7 +41,9 @@ describe('useListarProdutos', () => {
         await waitFor(() => {
           expect(hook.current.isLoading).toBeFalsy();
         });
-        expect(hook.current.produtos).toEqual(MOCKED_PRODUTOS);
+        expect(hook.current.produtos).toEqual({
+          'mocked-category': MOCKED_PRODUTOS,
+        });
       });
     });
   });
