@@ -7,6 +7,7 @@ import {
 } from '@testing-library/react-native';
 
 import { THEME } from '@/shared/constants/theme';
+import { storeResetFns } from './__mocks__';
 
 QueryClient.prototype.prefetchQuery = jest.fn();
 QueryClient.prototype.invalidateQueries = jest.fn();
@@ -54,6 +55,9 @@ export function sleep(duration: number) {
 
 beforeEach(() => {
   jest.clearAllMocks();
+  storeResetFns.forEach((resetFn) => {
+    resetFn();
+  });
 });
 
 afterEach(() => {

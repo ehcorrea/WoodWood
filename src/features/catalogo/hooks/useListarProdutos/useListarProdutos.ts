@@ -1,15 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Alert } from 'react-native';
 
 import { listarProdutos } from '@/services/api';
-import { ProdutosEmCategoria } from '../../types/categoria';
-import { produtosPorCategoria } from '../../utils';
+
+import { catalogoStore } from '../../store';
 
 export function useListarProdutos() {
-  const [produtos, setProdutos] = useState<undefined | ProdutosEmCategoria>(
-    undefined
-  );
+  const updateProdutos = catalogoStore((state) => state.updateProdutos);
   const { data, isLoading, refetch, isError } = useQuery({
     queryKey: ['listarProdutos'],
     queryFn: listarProdutos,
@@ -17,7 +15,7 @@ export function useListarProdutos() {
 
   useEffect(() => {
     if (data && !isLoading) {
-      setProdutos(produtosPorCategoria(data));
+      updateProdutos(data);
     }
   }, [data, isLoading]);
 
@@ -30,5 +28,5 @@ export function useListarProdutos() {
     }
   }, [isError]);
 
-  return { produtos, isLoading };
+  return { isLoading };
 }

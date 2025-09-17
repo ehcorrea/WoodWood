@@ -1,14 +1,30 @@
 import { renderHook, waitFor } from '@testing-library/react-native';
 import { Alert } from 'react-native';
 
-import { sleep, TestProvider, mockedApi, MOCKED_PRODUTOS } from '@/test/utils';
+import { catalogoStore } from '../../store';
+
+import {
+  sleep,
+  TestProvider,
+  mockedApi,
+  MOCKED_PRODUTOS,
+  mockedStore,
+} from '@/test/utils';
 
 import { useListarProdutos } from './useListarProdutos';
 
 jest.useFakeTimers();
 jest.spyOn(Alert, 'alert');
 
-const setup = () => renderHook(useListarProdutos, { wrapper: TestProvider });
+const updateProdutos = jest.fn();
+
+const setup = () => {
+  mockedStore({
+    store: catalogoStore,
+    storeValues: { ...catalogoStore.getState(), updateProdutos },
+  });
+  return renderHook(useListarProdutos, { wrapper: TestProvider });
+};
 
 describe('useListarProdutos', () => {
   describe('quando renderizado', () => {
@@ -19,7 +35,7 @@ describe('useListarProdutos', () => {
       });
       const hook = setup().result;
       expect(hook.current.isLoading).toBeTruthy();
-      expect(hook.current.produtos).toEqual(undefined);
+      expect(updateProdutos).not.toHaveBeenCalled();
     });
     describe('e requisição concluida', () => {
       test('com erro', async () => {
@@ -41,9 +57,7 @@ describe('useListarProdutos', () => {
         await waitFor(() => {
           expect(hook.current.isLoading).toBeFalsy();
         });
-        expect(hook.current.produtos).toEqual({
-          'mocked-category': MOCKED_PRODUTOS,
-        });
+        expect(updateProdutos).toHaveBeenCalledWith(MOCKED_PRODUTOS);
       });
     });
   });
