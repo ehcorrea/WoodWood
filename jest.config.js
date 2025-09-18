@@ -6,6 +6,7 @@ module.exports = {
   setupFiles: ['<rootDir>/.jest/setup.ts'],
   setupFilesAfterEnv: ['@testing-library/jest-native/extend-expect'],
   transform: {
+    '^.+\\.svg$': '<rootDir>/src/test/__mocks__/svg.js',
     '^.+\\.jsx?$': 'babel-jest',
     '^.+\\.js$': 'babel-jest',
   },
