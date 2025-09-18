@@ -20,6 +20,7 @@ export function ListaDeProdutos() {
 
   return (
     <FlatList
+      key={String(categoriaSelecionada)}
       data={lista}
       ItemSeparatorComponent={() => <Spacing y={10} />}
       showsVerticalScrollIndicator={false}
