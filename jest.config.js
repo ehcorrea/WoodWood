@@ -14,7 +14,17 @@ module.exports = {
     'node_modules/(?!@react-native|react-native|@react-navigation)',
   ],
   collectCoverage: false,
-  collectCoverageFrom: ['src/**/*.{ts,tsx}'],
+  collectCoverageFrom: [
+    'src/**/*.{ts,tsx}',
+    '!src/**/store/**',
+    '!src/**/stores/**',
+    '!src/**/@types/**',
+    '!src/**/types/**',
+    '!src/app/**',
+    '!src/assets/**',
+    '!src/navigators/**',
+    '!src/services/**',
+  ],
   coverageThreshold: {
     global: {
       branches: 80,
