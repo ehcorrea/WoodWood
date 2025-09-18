@@ -9,9 +9,20 @@ import { NavigationParamList } from './RootNavigator.types';
 
 const Stack = createStackNavigator<NavigationParamList>();
 
+const linking = {
+  prefixes: ['myapp://'],
+  config: {
+    screens: {
+      DetalhesScreen: {
+        path: 'produto/:id',
+      },
+    },
+  },
+};
+
 function Navigation() {
   return (
-    <NavigationContainer>
+    <NavigationContainer linking={linking}>
       <Stack.Navigator screenOptions={{ header: Header }}>
         <Stack.Screen name="CatalogoScreen" component={CatalogoScreen} />
         <Stack.Screen name="DetalhesScreen" component={DetalhesScreen} />

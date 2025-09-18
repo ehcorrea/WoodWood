@@ -57,5 +57,14 @@
 		<string>SofiaPro-Regular.otf</string>
 		<string>SofiaPro-SemiBold.otf</string>
 	</array>
+  <key>CFBundleURLTypes</key>
+  <array>
+    <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>myapp</string>
+      </array>
+      </dict>
+    </array>
 </dict>
 </plist>
