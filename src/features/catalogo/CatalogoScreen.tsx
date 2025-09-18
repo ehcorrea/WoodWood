@@ -1,11 +1,18 @@
-import { View } from 'react-native';
+import { Spacing } from '@/shared/components';
 
-import { Text } from '../../shared/components';
+import { useListarProdutos } from './hooks';
+import { Categorias, ListaDeProdutos } from './components';
+
+import * as S from './CatalogoScreen.styles';
 
 export default function CatalogoScreen() {
+  useListarProdutos();
+
   return (
-    <View>
-      <Text>CatalogoScreen</Text>
-    </View>
+    <S.Wrapper>
+      <Categorias />
+      <Spacing y={10} />
+      <ListaDeProdutos />
+    </S.Wrapper>
   );
 }
