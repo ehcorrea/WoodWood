@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardProduto/> quando renderizado 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "borderBottomLeftRadius": 10,
+        "borderBottomRightRadius": 10,
+        "borderTopLeftRadius": 10,
+        "borderTopRightRadius": 10,
+        "elevation": 3,
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "height": 230,
+        "justifyContent": "space-between",
+        "marginHorizontal": 5,
+        "overflow": "hidden",
+        "shadowColor": "#000",
+        "shadowOffset": {
+          "height": 3,
+          "width": 1,
+        },
+        "shadowOpacity": 0.2,
+        "shadowRadius": 2,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "left": "-17%",
+          "paddingVertical": 3,
+          "position": "absolute",
+          "right": "50%",
+          "top": "8%",
+          "transform": [
+            {
+              "rotate": "-45deg",
+            },
+          ],
+          "zIndex": 1,
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      maxFontSizeMultiplier={1}
+      style={
+        [
+          {
+            "color": "#1A1D26",
+            "fontFamily": "SofiaPro-SemiBold",
+            "fontSize": 21.5,
+            "lineHeight": 25.5,
+          },
+          [
+            {
+              "backgroundColor": "yellow",
+              "height": 25,
+              "lineHeight": 25,
+              "textAlign": "center",
+              "width": "100%",
+            },
+            undefined,
+          ],
+        ]
+      }
+      weight="semibold"
+    >
+      R$ 
+      100
+    </Text>
+  </View>
+  <Image
+    resizeMode="contain"
+    source={
+      {
+        "uri": "mocked-image",
+      }
+    }
+    style={
+      [
+        {
+          "aspectRatio": 1,
+          "height": "50%",
+          "marginBottom": 10,
+          "marginLeft": 10,
+          "marginRight": 10,
+          "marginTop": 10,
+        },
+        undefined,
+      ]
+    }
+  />
+  <Text
+    numberOfLines={2}
+    style={
+      [
+        {
+          "color": "#1A1D26",
+          "fontFamily": "SofiaPro-Regular",
+          "fontSize": 21.5,
+          "lineHeight": 25.5,
+        },
+        [
+          {
+            "paddingBottom": 10,
+            "paddingLeft": 10,
+            "paddingRight": 10,
+            "paddingTop": 10,
+          },
+          undefined,
+        ],
+      ]
+    }
+  >
+    mocked-title
+    
+
+  </Text>
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "backgroundColor": "#EA5B0C",
+          "paddingBottom": 5,
+          "paddingLeft": 5,
+          "paddingRight": 5,
+          "paddingTop": 5,
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      palette="white"
+      size="large"
+      style={
+        [
+          {
+            "color": "#FFFFFF",
+            "fontFamily": "SofiaPro-SemiBold",
+            "fontSize": 25.5,
+            "lineHeight": 28.5,
+          },
+          undefined,
+        ]
+      }
+      weight="semibold"
+    >
+      Ver detalhes
+    </Text>
+  </View>
+</View>
+`;
