@@ -10,7 +10,9 @@ module.exports = {
     '^.+\\.jsx?$': 'babel-jest',
     '^.+\\.js$': 'babel-jest',
   },
-  transformIgnorePatterns: ['node_modules/(?!@react-native|react-native)'],
+  transformIgnorePatterns: [
+    'node_modules/(?!@react-native|react-native|@react-navigation)',
+  ],
   collectCoverage: false,
   collectCoverageFrom: ['src/**/*.{ts,tsx}'],
   coverageThreshold: {

@@ -27,15 +27,19 @@ export const queryClient = new QueryClient({
   },
 });
 
+const { NavigationContainer } = jest.requireActual('@react-navigation/native');
+
 export const TestProvider = ({
   children,
 }: {
   children: React.ReactElement;
 }) => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <ThemeProvider theme={THEME}>{children}</ThemeProvider>
-    </QueryClientProvider>
+    <NavigationContainer>
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider theme={THEME}>{children}</ThemeProvider>
+      </QueryClientProvider>
+    </NavigationContainer>
   );
 };
 
