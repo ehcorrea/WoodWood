@@ -7,17 +7,22 @@ import { create } from '@/shared/stores';
 type CatalogoStoreState = {
   produtos: ProdutosEmCategoria;
   categorias: Array<keyof ProdutosEmCategoria>;
+  categoriaSelecionada: keyof ProdutosEmCategoria | undefined;
 };
 
 type CatalogoStoreActions = {
   updateProdutos: (produtos: Produto[]) => void;
+  updateCategoriaSelecionada: (
+    categoriaSelecionada: CatalogoStoreState['categoriaSelecionada']
+  ) => void;
 };
 
 export type CatalogoStore = CatalogoStoreState & CatalogoStoreActions;
 
 const initialState: CatalogoStoreState = {
-  produtos: {},
   categorias: [],
+  categoriaSelecionada: undefined,
+  produtos: {},
 };
 
 export const catalogoStore = create<CatalogoStore>((set, get) => ({
@@ -28,6 +33,12 @@ export const catalogoStore = create<CatalogoStore>((set, get) => ({
       ...get(),
       produtos: produtosEmCategoria,
       categorias: Object.keys(produtosEmCategoria),
+    });
+  },
+  updateCategoriaSelecionada: (categoriaSelecionada) => {
+    set({
+      ...get(),
+      categoriaSelecionada,
     });
   },
 }));

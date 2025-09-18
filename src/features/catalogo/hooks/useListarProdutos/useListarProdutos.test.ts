@@ -1,15 +1,9 @@
+import { mockedCatalagoStore } from '../../__mocks__/store';
+
 import { renderHook, waitFor } from '@testing-library/react-native';
 import { Alert } from 'react-native';
 
-import { catalogoStore } from '../../store';
-
-import {
-  sleep,
-  TestProvider,
-  mockedApi,
-  MOCKED_PRODUTOS,
-  mockedStore,
-} from '@/test/utils';
+import { sleep, TestProvider, mockedApi, MOCKED_PRODUTOS } from '@/test/utils';
 
 import { useListarProdutos } from './useListarProdutos';
 
@@ -19,10 +13,7 @@ jest.spyOn(Alert, 'alert');
 const updateProdutos = jest.fn();
 
 const setup = () => {
-  mockedStore({
-    store: catalogoStore,
-    storeValues: { ...catalogoStore.getState(), updateProdutos },
-  });
+  mockedCatalagoStore({ updateProdutos });
   return renderHook(useListarProdutos, { wrapper: TestProvider });
 };
 
