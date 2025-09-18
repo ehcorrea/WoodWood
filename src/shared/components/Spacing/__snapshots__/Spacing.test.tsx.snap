@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Spacing/> quando renderizado com x=5 e y=5 1`] = `
+<View
+  style={
+    [
+      {
+        "marginHorizontal": 5,
+        "marginVertical": 5,
+      },
+      undefined,
+    ]
+  }
+  testID="spacing"
+  x={5}
+  y={5}
+/>
+`;
+
+exports[`<Spacing/> quando renderizado com x=10 e y=10 1`] = `
+<View
+  style={
+    [
+      {
+        "marginHorizontal": 10,
+        "marginVertical": 10,
+      },
+      undefined,
+    ]
+  }
+  testID="spacing"
+  x={10}
+  y={10}
+/>
+`;
+
+exports[`<Spacing/> quando renderizado com x=15 e y=15 1`] = `
+<View
+  style={
+    [
+      {
+        "marginHorizontal": 15,
+        "marginVertical": 15,
+      },
+      undefined,
+    ]
+  }
+  testID="spacing"
+  x={15}
+  y={15}
+/>
+`;
