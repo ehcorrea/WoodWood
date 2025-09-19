@@ -1,4 +1,4 @@
-import { ScrollView, View } from 'react-native';
+import { ActivityIndicator, ScrollView, View } from 'react-native';
 import { RouteProp, useRoute } from '@react-navigation/native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -17,7 +17,7 @@ export default function DetalhesScreen() {
   const route = useRoute<DetalheScreen>();
   const { bottom } = useSafeAreaInsets();
   const { adicionarProduto } = carrinhoStore();
-  const { produto } = useDetalhesProduto(route.params);
+  const { produto, isLoading } = useDetalhesProduto(route.params);
 
   const handleAdicionarProduto = (produtoParaAdicionar: Produto) => {
     const { id, image, price, title } = produtoParaAdicionar;
@@ -28,6 +28,10 @@ export default function DetalhesScreen() {
       title,
     });
   };
+
+  if (isLoading) {
+    return <ActivityIndicator size="large" testID="loading" />;
+  }
 
   return (
     <S.Wrapper>
