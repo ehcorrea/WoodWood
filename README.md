@@ -75,5 +75,6 @@ Foi configurada a integração do [ESlint](https://eslint.org/) e [Prettier](htt
 
 # Roadmap WoodWood
 - **[plopjs](https://plopjs.com/):** Ferramenta para criar arquivos e diretorios via terminal(```yarn generate:feature```), sendo possível gerar a estrutura inicial inteira de uma nova feature;
-- **melhoria no deeplink:** Adicionar configuração para acessar a patir de um domínio, como trabalhava o [Dynamic Links]([https://plopjs.com/](https://firebase.google.com/docs/dynamic-links?hl=pt-br);
-- **[flash-list](ttps://shopify.github.io/flash-list/):** Ferramenta permitir maior perfornace em listas maiores;
+- **[flash-list](https://shopify.github.io/flash-list):** Ferramenta permitir maior perfornace em listas maiores;
+- **[dynamic-links](https://firebase.google.com/docs/dynamic-links?hl=pt-br):** Adicionar configuraçãos para App Links e Universal Links;
+
