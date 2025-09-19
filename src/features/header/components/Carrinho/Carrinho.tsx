@@ -33,7 +33,7 @@ export function Carrinho({ valor }: CarrinhoProps) {
       <IconCart width={30} height={30} />
       <S.ContainerValor>
         <Text palette="white" weight="semibold" size="small">
-          {valor >= 100 ? '99+' : valor}
+          {valor >= 100 ? '+99' : valor}
         </Text>
       </S.ContainerValor>
     </S.Wrapper>
