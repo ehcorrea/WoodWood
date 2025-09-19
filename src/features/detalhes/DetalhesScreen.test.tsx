@@ -3,17 +3,23 @@ import * as navigation from '@react-navigation/native';
 
 import { render } from '@/test/utils';
 import { criarMockProduto, mockedCarrinhoStore } from '@/test/__mocks__/';
+import { Produto } from '@/services/api';
 
 import * as useDetalhesProduto from './hooks/useDetalhesProduto/useDetalhesProduto';
 
-import DetalhesScreen, { DetalheScreen } from './DetalhesScreen';
+import DetalhesScreen from './DetalhesScreen';
+
+type SetupArgs = {
+  id: number;
+  produto?: Produto;
+};
 
 const adicionarProduto = jest.fn();
 
-const setup = ({ id, produto }: DetalheScreen['params']) => {
+const setup = ({ id, produto }: SetupArgs) => {
   mockedCarrinhoStore({ adicionarProduto });
   jest.spyOn(navigation, 'useRoute').mockReturnValueOnce({
-    params: { produto, id },
+    params: { id },
     key: 'detalhes-screen',
     name: 'DetalhesScreen',
   });
@@ -28,12 +34,12 @@ describe('<DetalhesScreen/>', () => {
     describe('e pressionado "Adicionar ao carrinho"', () => {
       test('com produto', () => {
         const produto = criarMockProduto();
-        const container = setup({ produto });
+        const container = setup({ id: produto.id, produto });
         const adicionarAoCarrinho = container.getByText(
           'Adicionar ao carrinho'
         );
         expect(useDetalhesProduto.useDetalhesProduto).toHaveBeenCalledWith({
-          produto,
+          id: produto.id,
         });
         fireEvent.press(adicionarAoCarrinho);
         expect(adicionarProduto).toHaveBeenCalledWith({
@@ -44,9 +50,10 @@ describe('<DetalhesScreen/>', () => {
         });
       });
       test('sem produto', () => {
-        const container = setup({ id: '1' });
+        const produto = criarMockProduto();
+        const container = setup({ id: produto.id });
         expect(useDetalhesProduto.useDetalhesProduto).toHaveBeenCalledWith({
-          id: '1',
+          id: 0,
         });
         expect(container.queryByText('Adicionar ao carrinho')).toBeFalsy();
       });
