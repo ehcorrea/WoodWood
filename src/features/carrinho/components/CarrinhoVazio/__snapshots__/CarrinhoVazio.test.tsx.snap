@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CarrinhoVazio/> quando renderizado 1`] = `
+<View
+  style={
+    [
+      {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "paddingBottom": "5%",
+        "paddingLeft": "5%",
+        "paddingRight": "5%",
+        "paddingTop": "5%",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      size="huge"
+      style={
+        [
+          {
+            "color": "#1A1D26",
+            "fontFamily": "SofiaPro-Bold",
+            "fontSize": 43,
+            "lineHeight": 71.5,
+          },
+          [
+            {
+              "alignSelf": "center",
+              "position": "absolute",
+              "textAlign": "center",
+              "top": "10%",
+              "zIndex": 1,
+            },
+            undefined,
+          ],
+        ]
+      }
+      weight="bold"
+    >
+      Atualmente seu carrinho está vazio...
+    </Text>
+    <Image
+      resizeMode="center"
+      source={
+        {
+          "testUri": "../../../src/assets/images/figure-empty-list.png",
+        }
+      }
+      style={
+        [
+          {
+            "height": "100%",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;
