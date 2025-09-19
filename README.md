@@ -1,97 +1,62 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# WoodWood
 
-# Getting Started
+Esse é um projeto com o intuido de criar um mini-app de e-commerce com React Native Bare.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Requisitos Técnicos(Obrigatórios)
 
-## Step 1: Start Metro
+### React Native Bare(ou CLI)
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+O projeto não possui **Expo SDK** e nenhuma de suas bibliotecas. Sendo iniciado com o comando:
 
-To start the Metro dev server, run the following command from the root of your React Native project:
-
-```sh
-# Using npm
-npm start
-
-# OR using Yarn
-yarn start
+```bash
+ npx @react-native-community/cli@latest init WoodWood
 ```
 
-## Step 2: Build and run your app
+### Feature-based Folders
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+A estrutura de pastas segue por **Features** e **Shared**. Sendo **@types**, **@types**, **services** e **navigators**, separadas dessa definição.
 
-### Android
+### Feature-based Folders
 
-```sh
-# Using npm
-npm run android
+As 3 features principais(Catalogo, Detalhes e Carrinho) contam com Testes unitários em todos os arquivos. Utilizando Mocks e Snapshots quando necessário.
 
-# OR using Yarn
-yarn android
+### Gerenciamento Global de Estados
+
+A ferramenta escolhida foi o [zustand](https://zustand.docs.pmnd.rs/getting-started/introduction). O projeto possui duas stores:
+
+- **catalogoStore:** comunicação entre o request, filtro e lista de produtos.
+- **carrinhoStore:** comunicação entre a feature de **detalhes**, **header** e **carrinho**.
+
+### Estilização com alguma biblioteca
+
+Foi utilizado [emotion](https://emotion.sh/docs/introduction), pois o [styled-components](https://styled-components.com/) será descontinuado. Ambos possuem uma utilização bem parecidade, incluindo a criação de temas com **ThemeProvider**.
+
+### Responsividade e acessibilidade
+
+Desenvolvimento validado em iPhone 16 Plus, iPhone SE, Android 720 x 1280(320dpi) e Android 1080 x 2400(420)dpi. Todo os botões que não possuem texto explicito ou são compostos por imagens/icon, possuem **accessibilityLabel** validado por teste unitário.
+
+## Requisitos Técnicos(Opcionais)
+
+### TypeScript
+
+O projeto possui 88.2% de TypeScript, sendo as demais linguagens para configuração.
+
+### Testes unitários com boa cobertura
+
+O projeto possui mais 80% de Coverage.
+
+### Deep Linking
+
+Configurado para Android e iOS:
+
+```bash
+  # Android
+  adb shell am start -W -a android.intent.action.VIEW \   -d "myapp://produto/1" \   com.woodwood;
+
+  # iOS
+  xcrun simctl openurl booted "myapp://produto/1"
 ```
 
-### iOS
+### Linter e Formatter
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Foi configurada a integração do [ESlint](https://eslint.org/) e [Prettier](https://prettier.io/) para a definição e aplicação das regras. Juntamente a isso, foi configurado o [commitizen](https://commitizen-tools.github.io/commitizen/) com [cz-conventional-changelog](https://commitizen-tools.github.io/commitizen/), para definir as regras de commit. Por fim, foi configurado o [husky](https://github.com/commitizen/cz-conventional-changelog) com [lint-staged](https://github.com/lint-staged/lint-staged), para rodar linters, formatadores e testes unitários relacionados aos arquivos do commit.
