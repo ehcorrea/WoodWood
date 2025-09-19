@@ -1,6 +1,5 @@
-import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { NavigationContainer } from '@react-navigation/native';
 
 import CatalogoScreen from '../features/catalogo/CatalogoScreen';
 import DetalhesScreen from '../features/detalhes/DetalhesScreen';
@@ -24,16 +23,13 @@ const linking = {
 
 function Navigation() {
   return (
-    <SafeAreaProvider>
-      <NavigationContainer linking={linking}>
-        <Header />
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="CatalogoScreen" component={CatalogoScreen} />
-          <Stack.Screen name="DetalhesScreen" component={DetalhesScreen} />
-          <Stack.Screen name="CarrinhoScreen" component={CarrinhoScreen} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </SafeAreaProvider>
+    <NavigationContainer linking={linking}>
+      <Stack.Navigator screenOptions={{ header: Header }}>
+        <Stack.Screen name="CatalogoScreen" component={CatalogoScreen} />
+        <Stack.Screen name="DetalhesScreen" component={DetalhesScreen} />
+        <Stack.Screen name="CarrinhoScreen" component={CarrinhoScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
