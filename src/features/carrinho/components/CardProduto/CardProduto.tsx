@@ -27,7 +27,11 @@ export function CardProduto({
 
   return (
     <S.Wrapper>
-      <S.Image source={{ uri: produto.image }} testID="image" />
+      <S.Image
+        source={{ uri: produto.image }}
+        testID="image"
+        resizeMode="contain"
+      />
       <Spacing x={5} />
       <S.ContainerInfos>
         <Text.Subtitle numberOfLines={1}>{produto.title}</Text.Subtitle>
