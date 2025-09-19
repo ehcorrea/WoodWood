@@ -6,6 +6,7 @@ import DetalhesScreen from '../features/detalhes/DetalhesScreen';
 import Header from '../features/header/Header';
 
 import { NavigationParamList } from './RootNavigator.types';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const Stack = createStackNavigator<NavigationParamList>();
 
@@ -22,12 +23,15 @@ const linking = {
 
 function Navigation() {
   return (
-    <NavigationContainer linking={linking}>
-      <Stack.Navigator screenOptions={{ header: Header }}>
-        <Stack.Screen name="CatalogoScreen" component={CatalogoScreen} />
-        <Stack.Screen name="DetalhesScreen" component={DetalhesScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <SafeAreaProvider>
+      <NavigationContainer linking={linking}>
+        <Header />
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="CatalogoScreen" component={CatalogoScreen} />
+          <Stack.Screen name="DetalhesScreen" component={DetalhesScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
 }
 
