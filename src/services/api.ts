@@ -17,3 +17,14 @@ export async function listarProdutos(): Promise<Produto[]> {
   const { data } = await client.get('/products');
   return data;
 }
+
+export type DetalhesProdutoArgs = {
+  id: string;
+};
+
+export async function detalhesProduto({
+  id,
+}: DetalhesProdutoArgs): Promise<Produto> {
+  const { data } = await client.get(`/products/${id}`);
+  return data;
+}
