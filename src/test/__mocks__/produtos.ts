@@ -1,3 +1,4 @@
+import { ProdutoDoCarrinho } from '@/shared/types';
 import { Produto } from '../../services/api';
 
 export const MOCKED_PRODUTOS: Produto[] = [
@@ -17,4 +18,11 @@ export const MOCKED_PRODUTOS: Produto[] = [
 
 export const criarMockProduto = (produto?: Partial<Produto>) => {
   return { ...MOCKED_PRODUTOS[0], ...produto };
+};
+
+export const criarMockProdutoDoCarrinho = (
+  produto?: Partial<ProdutoDoCarrinho>
+): ProdutoDoCarrinho => {
+  const { id, image, price, title } = MOCKED_PRODUTOS[0];
+  return { id, image, price, title, total: 100, quantidade: 1, ...produto };
 };
