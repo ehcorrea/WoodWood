@@ -1,5 +1,6 @@
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useMemo } from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 import { Text } from '@/shared/components';
 import { carrinhoStore } from '@/shared/stores';
@@ -10,6 +11,7 @@ import * as S from './Header.styles';
 
 export default function Header() {
   const inserts = useSafeAreaInsets();
+  const { navigate } = useNavigation();
   const produtos = carrinhoStore((state) => state.produtos);
   const produtosTotais = useMemo(
     () =>
@@ -25,6 +27,7 @@ export default function Header() {
         woodwood
       </Text.Title>
       <S.ContainerCarrinho
+        onPress={() => navigate('CarrinhoScreen')}
         accessibilityLabel={`Ir para o carrinho com ${produtosTotais} produtos`}
       >
         <Carrinho valor={produtosTotais} />
