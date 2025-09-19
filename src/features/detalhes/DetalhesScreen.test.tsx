@@ -36,6 +36,7 @@ describe('<DetalhesScreen/>', () => {
       const container = setup({ id: 1, isLoading: true });
       expect(container.getByTestId('loading')).toBeTruthy();
       expect(container.queryByText('Adicionar ao carrinho')).toBeFalsy();
+      expect(container).toMatchSnapshot();
     });
     describe('e fora de loading', () => {
       describe('e pressionado "Adicionar ao carrinho"', () => {
@@ -56,6 +57,7 @@ describe('<DetalhesScreen/>', () => {
             price: produto.price,
             title: produto.title,
           });
+          expect(container).toMatchSnapshot();
         });
         test('sem produto', () => {
           const produto = criarMockProduto();
@@ -64,6 +66,7 @@ describe('<DetalhesScreen/>', () => {
             id: 0,
           });
           expect(container.queryByText('Adicionar ao carrinho')).toBeFalsy();
+          expect(container).toMatchSnapshot();
         });
       });
     });

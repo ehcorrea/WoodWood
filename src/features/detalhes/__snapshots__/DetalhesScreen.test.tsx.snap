@@ -1,0 +1,385 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DetalhesScreen/> quando renderizado e em loading 1`] = `
+<ActivityIndicator
+  size="large"
+  testID="loading"
+/>
+`;
+
+exports[`<DetalhesScreen/> quando renderizado e fora de loading e pressionado "Adicionar ao carrinho" com produto 1`] = `
+<View
+  style={
+    [
+      {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "paddingBottom": "5%",
+        "paddingLeft": "5%",
+        "paddingRight": "5%",
+        "paddingTop": "5%",
+      },
+      undefined,
+    ]
+  }
+>
+  <RCTScrollView
+    bounces={false}
+    contentContainerStyle={
+      {
+        "paddingBottom": 95,
+      }
+    }
+    showsVerticalScrollIndicator={false}
+  >
+    <View>
+      <Image
+        resizeMode="contain"
+        source={
+          {
+            "uri": "mocked-image",
+          }
+        }
+        style={
+          [
+            {
+              "aspectRatio": 1,
+              "width": "100%",
+            },
+            undefined,
+          ]
+        }
+      />
+      <View
+        style={
+          [
+            {
+              "marginHorizontal": 0,
+              "marginVertical": 10,
+            },
+            undefined,
+          ]
+        }
+        testID="spacing"
+        x={0}
+        y={10}
+      />
+      <View>
+        <Text
+          size="xlarge"
+          style={
+            [
+              {
+                "color": "#1A1D26",
+                "fontFamily": "SofiaPro-Bold",
+                "fontSize": 34.5,
+                "lineHeight": 43,
+              },
+              undefined,
+            ]
+          }
+          weight="bold"
+        >
+          mocked-title
+        </Text>
+        <View
+          style={
+            [
+              {
+                "marginHorizontal": 0,
+                "marginVertical": 10,
+              },
+              undefined,
+            ]
+          }
+          testID="spacing"
+          x={0}
+          y={10}
+        />
+        <Text
+          size="large"
+          style={
+            [
+              {
+                "color": "#1A1D26",
+                "fontFamily": "SofiaPro-SemiBold",
+                "fontSize": 25.5,
+                "lineHeight": 28.5,
+              },
+              undefined,
+            ]
+          }
+          weight="semibold"
+        >
+          R$ 
+          100
+        </Text>
+        <View
+          style={
+            [
+              {
+                "marginHorizontal": 0,
+                "marginVertical": 10,
+              },
+              undefined,
+            ]
+          }
+          testID="spacing"
+          x={0}
+          y={10}
+        />
+        <Text
+          style={
+            [
+              {
+                "color": "#1A1D26",
+                "fontFamily": "SofiaPro-Regular",
+                "fontSize": 21.5,
+                "lineHeight": 25.5,
+              },
+              undefined,
+            ]
+          }
+        >
+          R$ 
+          mocked-description
+        </Text>
+        <View
+          style={
+            [
+              {
+                "marginHorizontal": 0,
+                "marginVertical": 10,
+              },
+              undefined,
+            ]
+          }
+          testID="spacing"
+          x={0}
+          y={10}
+        />
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "backgroundColor": "#EA5B0C",
+        "borderBottomLeftRadius": 30,
+        "borderBottomRightRadius": 30,
+        "borderTopLeftRadius": 30,
+        "borderTopRightRadius": 30,
+        "bottom": 10,
+        "height": 50,
+        "justifyContent": "center",
+        "opacity": 1,
+        "position": "absolute",
+        "width": "90%",
+      }
+    }
+  >
+    <Text
+      palette="white"
+      size="large"
+      style={
+        [
+          {
+            "color": "#FFFFFF",
+            "fontFamily": "SofiaPro-SemiBold",
+            "fontSize": 25.5,
+            "lineHeight": 28.5,
+          },
+          undefined,
+        ]
+      }
+      weight="semibold"
+    >
+      Adicionar ao carrinho
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`<DetalhesScreen/> quando renderizado e fora de loading e pressionado "Adicionar ao carrinho" sem produto 1`] = `
+<View
+  style={
+    [
+      {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "paddingBottom": "5%",
+        "paddingLeft": "5%",
+        "paddingRight": "5%",
+        "paddingTop": "5%",
+      },
+      undefined,
+    ]
+  }
+>
+  <RCTScrollView
+    bounces={false}
+    contentContainerStyle={
+      {
+        "paddingBottom": 95,
+      }
+    }
+    showsVerticalScrollIndicator={false}
+  >
+    <View>
+      <Image
+        resizeMode="contain"
+        source={
+          {
+            "uri": undefined,
+          }
+        }
+        style={
+          [
+            {
+              "aspectRatio": 1,
+              "width": "100%",
+            },
+            undefined,
+          ]
+        }
+      />
+      <View
+        style={
+          [
+            {
+              "marginHorizontal": 0,
+              "marginVertical": 10,
+            },
+            undefined,
+          ]
+        }
+        testID="spacing"
+        x={0}
+        y={10}
+      />
+      <View>
+        <Text
+          size="xlarge"
+          style={
+            [
+              {
+                "color": "#1A1D26",
+                "fontFamily": "SofiaPro-Bold",
+                "fontSize": 34.5,
+                "lineHeight": 43,
+              },
+              undefined,
+            ]
+          }
+          weight="bold"
+        />
+        <View
+          style={
+            [
+              {
+                "marginHorizontal": 0,
+                "marginVertical": 10,
+              },
+              undefined,
+            ]
+          }
+          testID="spacing"
+          x={0}
+          y={10}
+        />
+        <Text
+          size="large"
+          style={
+            [
+              {
+                "color": "#1A1D26",
+                "fontFamily": "SofiaPro-SemiBold",
+                "fontSize": 25.5,
+                "lineHeight": 28.5,
+              },
+              undefined,
+            ]
+          }
+          weight="semibold"
+        >
+          R$ 
+        </Text>
+        <View
+          style={
+            [
+              {
+                "marginHorizontal": 0,
+                "marginVertical": 10,
+              },
+              undefined,
+            ]
+          }
+          testID="spacing"
+          x={0}
+          y={10}
+        />
+        <Text
+          style={
+            [
+              {
+                "color": "#1A1D26",
+                "fontFamily": "SofiaPro-Regular",
+                "fontSize": 21.5,
+                "lineHeight": 25.5,
+              },
+              undefined,
+            ]
+          }
+        >
+          R$ 
+        </Text>
+        <View
+          style={
+            [
+              {
+                "marginHorizontal": 0,
+                "marginVertical": 10,
+              },
+              undefined,
+            ]
+          }
+          testID="spacing"
+          x={0}
+          y={10}
+        />
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
