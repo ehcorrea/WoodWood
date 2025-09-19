@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Carrinho/> quando renderiza e possui valor maior que 99 1`] = `
+exports[`<Carrinho/> quando renderizado e possui valor maior que 99 1`] = `
 <View
   collapsable={false}
   entering={
@@ -138,7 +138,7 @@ exports[`<Carrinho/> quando renderiza e possui valor maior que 99 1`] = `
 </View>
 `;
 
-exports[`<Carrinho/> quando renderiza e possui valor menor que 99 1`] = `
+exports[`<Carrinho/> quando renderizado e possui valor menor que 99 1`] = `
 <View
   collapsable={false}
   entering={

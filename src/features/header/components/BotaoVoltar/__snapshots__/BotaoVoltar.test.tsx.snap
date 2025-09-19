@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BotaoVoltar/> quando renderizado 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "borderBottomLeftRadius": 10,
+        "borderBottomRightRadius": 10,
+        "borderTopLeftRadius": 10,
+        "borderTopRightRadius": 10,
+        "height": 35,
+        "justifyContent": "center",
+        "width": 35,
+      },
+      undefined,
+    ]
+  }
+>
+  <svg
+    data-file-name="SvgIconBack"
+    height={30}
+    width={30}
+  />
+</View>
+`;

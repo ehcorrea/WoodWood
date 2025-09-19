@@ -6,7 +6,7 @@ const setup = (valor: number = 10) => {
 };
 
 describe('<Carrinho/>', () => {
-  describe('quando renderiza', () => {
+  describe('quando renderizado', () => {
     test('e possui valor menor que 99', () => {
       const container = setup();
       expect(container.getByText('10')).toBeTruthy();
