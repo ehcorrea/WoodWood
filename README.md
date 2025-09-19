@@ -33,7 +33,13 @@ Foi utilizado [emotion](https://emotion.sh/docs/introduction), pois o [styled-co
 
 ### Responsividade e acessibilidade
 
-Desenvolvimento validado em iPhone 16 Plus, iPhone SE, Android 720 x 1280(320dpi) e Android 1080 x 2400(420)dpi. Todo os botões que não possuem texto explicito ou são compostos por imagens/icon, possuem **accessibilityLabel** validado por teste unitário.
+Desenvolvimento validado em: 
+- iPhone 16 Plus;
+- iPhone SE;
+- Android 720 x 1280(320dpi);
+- Android 1080 x 2400(420)dpi;
+
+Todos os botões que não possuem texto explicito ou são compostos por imagens/icon, possuem **accessibilityLabel** validado por teste unitário.
 
 ## Requisitos Técnicos(Opcionais)
 
@@ -59,4 +65,15 @@ Configurado para Android e iOS:
 
 ### Linter e Formatter
 
-Foi configurada a integração do [ESlint](https://eslint.org/) e [Prettier](https://prettier.io/) para a definição e aplicação das regras. Juntamente a isso, foi configurado o [commitizen](https://commitizen-tools.github.io/commitizen/) com [cz-conventional-changelog](https://commitizen-tools.github.io/commitizen/), para definir as regras de commit. Por fim, foi configurado o [husky](https://github.com/commitizen/cz-conventional-changelog) com [lint-staged](https://github.com/lint-staged/lint-staged), para rodar linters, formatadores e testes unitários relacionados aos arquivos do commit.
+Foi configurada a integração do [ESlint](https://eslint.org/) e [Prettier](https://prettier.io/) para a definição e aplicação das regras. Juntamente a isso, foi configurado o [commitizen](https://commitizen-tools.github.io/commitizen/) com [cz-conventional-changelog](https://commitizen-tools.github.io/commitizen/), para definir as regras de commit. Por fim, foi configurado o [husky](https://github.com/commitizen/cz-conventional-changelog) com [lint-staged](https://github.com/lint-staged/lint-staged), para rodar linters, formatadores e testes unitários relacionados aos arquivos do commit:
+
+1. Adicione arquivos ao staged;
+2. Rode ```git commit``` no terminal;
+3. Ele irá validar os arquivos associados;
+4. Caso não falhe teste ou linter, basta seguir as instruções;
+5. Caso falhe em teste ou linter, será Necessário revisar os arquivos;
+
+# Roadmap WoodWood
+- **[plopjs](https://plopjs.com/):** Ferramenta para criar arquivos e diretorios via terminal(```yarn generate:feature```), sendo possível gerar a estrutura inicial inteira de uma nova feature;
+- **melhoria no deeplink:** Adicionar configuração para acessar a patir de um domínio, como trabalhava o [Dynamic Links]([https://plopjs.com/](https://firebase.google.com/docs/dynamic-links?hl=pt-br);
+- **[flash-list](ttps://shopify.github.io/flash-list/):** Ferramenta permitir maior perfornace em listas maiores;
