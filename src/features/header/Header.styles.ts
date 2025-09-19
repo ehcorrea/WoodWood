@@ -6,12 +6,18 @@ type WrapperProps = {
 
 export const Wrapper = styled.View<WrapperProps>`
   ${({ theme, top }) => css`
-    align-items: center;
     background-color: ${theme.colors.primary.main};
     justify-content: center;
     padding: 20px;
     padding-top: ${`${top + 20}px`};
     top: 0;
     width: 100%;
+    flex-direction: row;
   `}
+`;
+
+export const ContainerCarrinho = styled.TouchableOpacity`
+  bottom: 60%;
+  position: absolute;
+  right: 30px;
 `;
