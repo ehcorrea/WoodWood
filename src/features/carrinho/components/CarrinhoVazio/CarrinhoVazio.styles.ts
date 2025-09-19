@@ -1,16 +1,7 @@
-import { Text } from '@/shared/components';
 import styled from '@emotion/native';
 
-export const Wrapper = styled.View`
+export const Wrapper = styled.ImageBackground`
   flex: 1;
-`;
-
-export const Title = styled(Text.Title)`
-  align-self: center;
-  position: absolute;
-  text-align: center;
-  top: 10%;
-  z-index: 1;
 `;
 
 export const Image = styled.Image`
