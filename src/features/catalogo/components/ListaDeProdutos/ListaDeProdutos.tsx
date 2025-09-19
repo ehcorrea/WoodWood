@@ -1,7 +1,8 @@
 import { Pressable, FlatList } from 'react-native';
-import { useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
+import { Produto } from '@/services/api';
 import { Spacing } from '@/shared/components';
 
 import { catalogoStore } from '../../store';
@@ -12,28 +13,33 @@ export function ListaDeProdutos() {
   const { categoriaSelecionada, produtos } = catalogoStore();
   const { navigate } = useNavigation();
 
-  const lista = useMemo(() => {
+  const data = useMemo(() => {
     return categoriaSelecionada
       ? produtos[categoriaSelecionada]
       : Object.values(produtos).flat();
   }, [produtos, categoriaSelecionada]);
 
+  const _renderItem = useCallback(
+    ({ item }: { item: Produto }) => (
+      <Pressable
+        style={{ flex: 1 }}
+        accessibilityLabel={`Ver detalhes sobre ${item.title}`}
+        onPress={() => navigate('DetalhesScreen', { produto: item })}
+      >
+        <CardProduto produto={item} />
+      </Pressable>
+    ),
+    []
+  );
+
   return (
     <FlatList
       key={String(categoriaSelecionada)}
-      data={lista}
+      data={data}
+      keyExtractor={(item) => String(item.id)}
       ItemSeparatorComponent={() => <Spacing y={10} />}
       showsVerticalScrollIndicator={false}
-      renderItem={({ item }) => (
-        <Pressable
-          key={item.id}
-          style={{ flex: 1 }}
-          accessibilityLabel={`Ver detalhes sobre ${item.title}`}
-          onPress={() => navigate('DetalhesScreen', { produto: item })}
-        >
-          <CardProduto produto={item} />
-        </Pressable>
-      )}
+      renderItem={_renderItem}
       numColumns={2}
     />
   );
