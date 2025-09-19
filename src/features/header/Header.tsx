@@ -5,7 +5,8 @@ import { useNavigation } from '@react-navigation/native';
 import { Text } from '@/shared/components';
 import { carrinhoStore } from '@/shared/stores';
 
-import { Carrinho } from './components';
+import { BotaoVoltar, Carrinho } from './components';
+import { useGoBack } from './hooks';
 
 import * as S from './Header.styles';
 
@@ -13,6 +14,7 @@ export default function Header() {
   const inserts = useSafeAreaInsets();
   const { navigate } = useNavigation();
   const produtos = carrinhoStore((state) => state.produtos);
+  const { handleGoBack, mostrarVoltar } = useGoBack();
   const produtosTotais = useMemo(
     () =>
       Object.values(produtos).reduce((acc, cur) => {
@@ -23,6 +25,15 @@ export default function Header() {
 
   return (
     <S.Wrapper {...inserts}>
+      {mostrarVoltar && (
+        <S.ContainerBotaoVoltar
+          onPress={() => handleGoBack()}
+          accessibilityLabel="Voltar"
+        >
+          <BotaoVoltar />
+        </S.ContainerBotaoVoltar>
+      )}
+
       <Text.Title palette="white" maxFontSizeMultiplier={1} size="xhuge">
         woodwood
       </Text.Title>

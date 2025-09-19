@@ -21,3 +21,9 @@ export const ContainerCarrinho = styled.TouchableOpacity`
   position: absolute;
   right: 30px;
 `;
+
+export const ContainerBotaoVoltar = styled.TouchableOpacity`
+  bottom: 60%;
+  position: absolute;
+  left: 30px;
+`;
