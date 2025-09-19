@@ -13,15 +13,29 @@ jest.mock('./components', () => ({
 
 const mockUseListarProdutos = jest.fn();
 
+const setup = (isLoading = false) => {
+  jest.spyOn(useListarProdutos, 'useListarProdutos').mockImplementation(() => {
+    mockUseListarProdutos();
+    return { isLoading };
+  });
+  return render(<CatalogoScreen />);
+};
+
 describe('<CatalogoScreen/>', () => {
+  describe('quando renderizado', () => {
+    test('e em loading', () => {
+      const container = setup(true);
+      expect(mockUseListarProdutos).toHaveBeenCalled();
+      expect(container.getByTestId('loading')).toBeTruthy();
+      expect(container.queryByTestId('categorias')).toBeFalsy();
+      expect(container.queryByTestId('listaDeProdutos')).toBeFalsy();
+      expect(container).toMatchSnapshot();
+    });
+  });
   test('quando renderizado', () => {
-    jest
-      .spyOn(useListarProdutos, 'useListarProdutos')
-      .mockImplementation(mockUseListarProdutos);
-    const container = render(<CatalogoScreen />);
-    expect(mockUseListarProdutos).toHaveBeenCalled();
+    const container = setup();
+    expect(container.queryByTestId('loading')).toBeFalsy();
     expect(container.getByTestId('categorias')).toBeTruthy();
     expect(container.getByTestId('listaDeProdutos')).toBeTruthy();
-    expect(container).toMatchSnapshot();
   });
 });
