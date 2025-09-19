@@ -24,7 +24,7 @@ export function ListaDeProdutos() {
       <Pressable
         style={{ flex: 1 }}
         accessibilityLabel={`Ver detalhes sobre ${item.title}`}
-        onPress={() => navigate('DetalhesScreen', { produto: item })}
+        onPress={() => navigate('DetalhesScreen', { id: item.id })}
       >
         <CardProduto produto={item} />
       </Pressable>

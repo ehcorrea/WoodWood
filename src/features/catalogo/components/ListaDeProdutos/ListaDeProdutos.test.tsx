@@ -50,11 +50,11 @@ describe('<ListaDeProdutos/>', () => {
       );
       fireEvent.press(itemA);
       expect(mockedNavigation.navigate).toHaveBeenCalledWith('DetalhesScreen', {
-        produto: produtos['categoria-A'],
+        id: produtos['categoria-A'].id,
       });
       fireEvent.press(itemB);
       expect(mockedNavigation.navigate).toHaveBeenCalledWith('DetalhesScreen', {
-        produto: produtos['categoria-B'],
+        id: produtos['categoria-B'].id,
       });
     });
   });

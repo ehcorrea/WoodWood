@@ -19,7 +19,7 @@ export async function listarProdutos(): Promise<Produto[]> {
 }
 
 export type DetalhesProdutoArgs = {
-  id: string;
+  id: number;
 };
 
 export async function detalhesProduto({

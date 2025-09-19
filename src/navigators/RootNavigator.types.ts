@@ -1,12 +1,9 @@
-import { Produto } from '@/services/api';
 import { StackNavigationProp, StackScreenProps } from '@react-navigation/stack';
 
 export type NavigationParamList = {
   CatalogoScreen: undefined;
   CarrinhoScreen: undefined;
-  DetalhesScreen:
-    | { produto: Produto; id?: string }
-    | { produto?: undefined; id: string };
+  DetalhesScreen: { id: number };
 };
 
 export type ScreenName = keyof NavigationParamList;
