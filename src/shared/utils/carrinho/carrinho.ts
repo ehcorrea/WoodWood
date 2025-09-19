@@ -34,3 +34,33 @@ export function adicionarProduto({
     produtoAtualizado,
   };
 }
+
+type RemoverProdutoArgs = {
+  produto: ProdutoSimplificao;
+  produtoListado: ProdutoDoCarrinho;
+  total: number;
+};
+
+type RemoverProduto = {
+  produtoAtualizado: ProdutoDoCarrinho | undefined;
+  totalAtualizado: number;
+};
+
+export function removerProduto({
+  produto,
+  produtoListado,
+  total,
+}: RemoverProdutoArgs): RemoverProduto {
+  const totalAtualizado = total - produto.price;
+  const produtoAtualizado: ProdutoDoCarrinho = {
+    ...produtoListado,
+    quantidade: produtoListado.quantidade - 1,
+    total: produtoListado.total - produto.price,
+  };
+
+  return {
+    totalAtualizado,
+    produtoAtualizado:
+      produtoAtualizado.quantidade === 0 ? undefined : produtoAtualizado,
+  };
+}

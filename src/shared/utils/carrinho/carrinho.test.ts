@@ -1,6 +1,6 @@
 import { criarMockProduto } from '@/test/__mocks__';
 
-import { adicionarProduto } from './carrinho';
+import { adicionarProduto, removerProduto } from './carrinho';
 
 const produto = criarMockProduto();
 
@@ -33,6 +33,33 @@ describe('adicionarProduto', () => {
         total: 200,
         quantidade: 2,
       });
+    });
+  });
+});
+
+describe('removerProduto', () => {
+  describe('quando executado', () => {
+    test('e quantidade é maior que 0', () => {
+      const { totalAtualizado, produtoAtualizado } = removerProduto({
+        produto,
+        produtoListado: { ...produto, total: 200, quantidade: 2 },
+        total: 200,
+      });
+      expect(totalAtualizado).toBe(100);
+      expect(produtoAtualizado).toStrictEqual({
+        ...produto,
+        total: 100,
+        quantidade: 1,
+      });
+    });
+    test('e quantidade é atualizada pra 0', () => {
+      const { totalAtualizado, produtoAtualizado } = removerProduto({
+        produto,
+        produtoListado: { ...produto, total: 100, quantidade: 1 },
+        total: 100,
+      });
+      expect(totalAtualizado).toBe(0);
+      expect(produtoAtualizado).toBeUndefined();
     });
   });
 });
