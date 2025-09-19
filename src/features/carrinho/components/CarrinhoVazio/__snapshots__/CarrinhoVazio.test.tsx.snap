@@ -18,6 +18,7 @@ exports[`<CarrinhoVazio/> quando renderizado 1`] = `
   }
 >
   <View
+    accessibilityIgnoresInvertColors={true}
     style={
       [
         {
@@ -29,34 +30,8 @@ exports[`<CarrinhoVazio/> quando renderizado 1`] = `
       ]
     }
   >
-    <Text
-      size="huge"
-      style={
-        [
-          {
-            "color": "#1A1D26",
-            "fontFamily": "SofiaPro-Bold",
-            "fontSize": 43,
-            "lineHeight": 71.5,
-          },
-          [
-            {
-              "alignSelf": "center",
-              "position": "absolute",
-              "textAlign": "center",
-              "top": "10%",
-              "zIndex": 1,
-            },
-            undefined,
-          ],
-        ]
-      }
-      weight="bold"
-    >
-      Atualmente seu carrinho está vazio...
-    </Text>
     <Image
-      resizeMode="center"
+      resizeMode="contain"
       source={
         {
           "testUri": "../../../src/assets/images/figure-empty-list.png",
@@ -65,8 +40,15 @@ exports[`<CarrinhoVazio/> quando renderizado 1`] = `
       style={
         [
           {
-            "height": "100%",
-            "width": "100%",
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          {
+            "height": undefined,
+            "width": undefined,
           },
           undefined,
         ]
