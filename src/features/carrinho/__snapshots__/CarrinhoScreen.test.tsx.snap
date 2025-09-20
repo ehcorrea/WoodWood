@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CarrinhoScreen/> quando renderizado e não possui nenhum produto no carrinho 1`] = `
+<View
+  style={
+    [
+      {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "paddingBottom": "5%",
+        "paddingLeft": "5%",
+        "paddingRight": "5%",
+        "paddingTop": "5%",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    testID="carrinhoVazio"
+  />
+</View>
+`;
+
+exports[`<CarrinhoScreen/> quando renderizado e possui algum produto no carrinho 1`] = `
+<View
+  style={
+    [
+      {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "paddingBottom": "5%",
+        "paddingLeft": "5%",
+        "paddingRight": "5%",
+        "paddingTop": "5%",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "flexBasis": 0,
+          "flexGrow": 4,
+          "flexShrink": 1,
+        },
+        undefined,
+      ]
+    }
+  >
+    <RCTScrollView
+      ItemSeparatorComponent={[Function]}
+      data={
+        [
+          {
+            "id": 0,
+            "image": "mocked-image",
+            "price": 100,
+            "quantidade": 3,
+            "title": "mocked-title",
+            "total": 300,
+          },
+        ]
+      }
+      getItem={[Function]}
+      getItemCount={[Function]}
+      keyExtractor={[Function]}
+      onContentSizeChange={[Function]}
+      onLayout={[Function]}
+      onMomentumScrollBegin={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={0.0001}
+      stickyHeaderIndices={[]}
+      style={
+        {
+          "flex": 1,
+        }
+      }
+      viewabilityConfigCallbackPairs={[]}
+    >
+      <View>
+        <View
+          onFocusCapture={[Function]}
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            testID="cardProduto"
+          />
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "justifyContent": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#1A1D26",
+            "fontFamily": "SofiaPro-Regular",
+            "fontSize": 21.5,
+            "lineHeight": 25.5,
+          },
+          undefined,
+        ]
+      }
+    >
+      Total: R$ 
+      300.00
+    </Text>
+  </View>
+</View>
+`;

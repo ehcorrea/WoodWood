@@ -38,12 +38,14 @@ describe('<CarrinhoScreen/>', () => {
       expect(container.getAllByTestId('cardProduto').length).toBe(1);
       expect(container.getByText('Total: R$ 300.00')).toBeTruthy();
       expect(container.queryByTestId('carrinhoVazio')).toBeFalsy();
+      expect(container).toMatchSnapshot();
     });
     test('e não possui nenhum produto no carrinho', () => {
       const container = setup(undefined, 0);
       expect(container.queryAllByTestId('cardProduto').length).toBe(0);
       expect(container.queryByText('Total: R$ 0.00')).toBeNull();
       expect(container.getByTestId('carrinhoVazio')).toBeTruthy();
+      expect(container).toMatchSnapshot();
     });
   });
 });
