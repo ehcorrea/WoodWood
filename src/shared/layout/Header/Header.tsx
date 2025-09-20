@@ -10,7 +10,7 @@ import { useGoBack } from './hooks';
 
 import * as S from './Header.styles';
 
-export default function Header() {
+export function Header() {
   const inserts = useSafeAreaInsets();
   const { navigate } = useNavigation();
   const produtos = carrinhoStore((state) => state.produtos);

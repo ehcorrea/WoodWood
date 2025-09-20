@@ -1,10 +1,11 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
+import { Header } from '../shared/layout';
+
 import CatalogoScreen from '../features/catalogo/CatalogoScreen';
 import DetalhesScreen from '../features/detalhes/DetalhesScreen';
 import CarrinhoScreen from '../features/carrinho/CarrinhoScreen';
-import Header from '../features/header/Header';
 
 import { NavigationParamList } from './RootNavigator.types';
 
