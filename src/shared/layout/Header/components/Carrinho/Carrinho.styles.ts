@@ -17,10 +17,9 @@ export const ContainerValor = styled.View`
     align-items: center;
     background-color: ${theme.colors.error.main};
     border-radius: 20px;
-    height: 20px;
     justify-content: center;
     min-width: 30px;
-    padding-top: 2px;
+    padding: 3px;
     position: absolute;
     right: -10px;
     top: -12px;

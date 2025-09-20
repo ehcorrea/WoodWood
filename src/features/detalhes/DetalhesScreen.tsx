@@ -56,7 +56,9 @@ export default function DetalhesScreen() {
           bottom={bottom}
           onPress={() => handleAdicionarProduto(produto)}
         >
-          <Text.Subtitle palette="white">Adicionar ao carrinho</Text.Subtitle>
+          <Text.Subtitle palette="white" adjustsFontSizeToFit>
+            Adicionar ao carrinho
+          </Text.Subtitle>
         </S.ButtonAdicionar>
       )}
     </S.Wrapper>

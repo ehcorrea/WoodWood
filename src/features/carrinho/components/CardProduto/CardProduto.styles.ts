@@ -6,14 +6,14 @@ export const Wrapper = styled.View`
     background-color: ${theme.colors.primary[20]};
     border-radius: 20px;
     flex-direction: row;
-    height: 130px;
+    min-height: 130px;
     padding: 20px;
   `}
 `;
 
 export const Image = styled.Image`
   aspect-ratio: 1;
-  height: 100%;
+  height: 80%;
 `;
 
 export const ContainerInfos = styled.View`

@@ -209,6 +209,7 @@ exports[`<DetalhesScreen/> quando renderizado e fora de loading e pressionado "A
     }
   >
     <Text
+      adjustsFontSizeToFit={true}
       palette="white"
       size="large"
       style={

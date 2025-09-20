@@ -104,10 +104,12 @@ exports[`<Carrinho/> quando renderizado e possui valor maior que 99 1`] = `
           "borderBottomRightRadius": 20,
           "borderTopLeftRadius": 20,
           "borderTopRightRadius": 20,
-          "height": 20,
           "justifyContent": "center",
           "minWidth": 30,
-          "paddingTop": 2,
+          "paddingBottom": 3,
+          "paddingLeft": 3,
+          "paddingRight": 3,
+          "paddingTop": 3,
           "position": "absolute",
           "right": -10,
           "top": -12,
@@ -117,6 +119,8 @@ exports[`<Carrinho/> quando renderizado e possui valor maior que 99 1`] = `
     }
   >
     <Text
+      adjustsFontSizeToFit={true}
+      numberOfLines={1}
       palette="white"
       size="small"
       style={
@@ -242,10 +246,12 @@ exports[`<Carrinho/> quando renderizado e possui valor menor que 99 1`] = `
           "borderBottomRightRadius": 20,
           "borderTopLeftRadius": 20,
           "borderTopRightRadius": 20,
-          "height": 20,
           "justifyContent": "center",
           "minWidth": 30,
-          "paddingTop": 2,
+          "paddingBottom": 3,
+          "paddingLeft": 3,
+          "paddingRight": 3,
+          "paddingTop": 3,
           "position": "absolute",
           "right": -10,
           "top": -12,
@@ -255,6 +261,8 @@ exports[`<Carrinho/> quando renderizado e possui valor menor que 99 1`] = `
     }
   >
     <Text
+      adjustsFontSizeToFit={true}
+      numberOfLines={1}
       palette="white"
       size="small"
       style={
