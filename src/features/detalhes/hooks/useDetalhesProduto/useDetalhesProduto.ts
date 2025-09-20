@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Alert } from 'react-native';
 import { useQuery } from '@tanstack/react-query';
 
-import { detalhesProduto } from '@/services/api';
+import { detalhesProduto } from '../../services/api';
 
 export type UseDetalhesProdutoArgs = {
   id: number;

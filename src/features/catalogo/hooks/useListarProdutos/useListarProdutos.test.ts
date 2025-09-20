@@ -1,9 +1,9 @@
-import { mockedCatalagoStore } from '../../__mocks__/store';
-
 import { renderHook, waitFor } from '@testing-library/react-native';
 import { Alert } from 'react-native';
 
-import { sleep, TestProvider, mockedApi, MOCKED_PRODUTOS } from '@/test/utils';
+import { sleep, TestProvider, MOCKED_PRODUTOS } from '@/test/utils';
+
+import { mockedApi, mockedCatalagoStore } from '../../__mocks__';
 
 import { useListarProdutos } from './useListarProdutos';
 

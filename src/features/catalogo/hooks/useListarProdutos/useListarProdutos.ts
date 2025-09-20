@@ -2,8 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useEffect } from 'react';
 import { Alert } from 'react-native';
 
-import { listarProdutos } from '@/services/api';
-
+import { listarProdutos } from '../../services/api';
 import { catalogoStore } from '../../store';
 
 export function useListarProdutos() {
