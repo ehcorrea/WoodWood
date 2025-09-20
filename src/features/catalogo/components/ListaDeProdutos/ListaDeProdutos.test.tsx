@@ -1,7 +1,8 @@
 import { View as MockedView } from 'react-native';
 import { fireEvent } from '@testing-library/react-native';
 
-import { render, criarMockProduto, mockedNavigation } from '@/test/utils';
+import { render, mockedNavigation } from '@/test/utils';
+import { criarMockProduto } from '@/shared/__mocks__';
 
 import { mockedCatalagoStore } from '../../__mocks__/store';
 

@@ -4,8 +4,9 @@ import { ProdutoDoCarrinho } from '@/shared/types';
 import {
   criarMockProdutoDoCarrinho,
   mockedCarrinhoStore,
-  render,
-} from '@/test/utils';
+} from '@/shared/__mocks__';
+
+import { render } from '@/test/utils';
 
 import CarrinhoScreen from './CarrinhoScreen';
 

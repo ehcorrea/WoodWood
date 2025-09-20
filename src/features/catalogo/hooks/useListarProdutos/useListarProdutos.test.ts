@@ -1,7 +1,8 @@
 import { renderHook, waitFor } from '@testing-library/react-native';
 import { Alert } from 'react-native';
 
-import { sleep, TestProvider, MOCKED_PRODUTOS } from '@/test/utils';
+import { sleep, TestProvider } from '@/test/utils';
+import { MOCKED_PRODUTOS } from '@/shared/__mocks__';
 
 import { mockedApi, mockedCatalagoStore } from '../../__mocks__';
 

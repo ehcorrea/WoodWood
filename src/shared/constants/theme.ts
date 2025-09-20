@@ -1,4 +1,4 @@
-import { rfvalue, rhvalue, rwvalue } from '../utils/responsive';
+import { rfvalue, rhvalue, rwvalue } from '../utils/responsive/responsive';
 
 const COLORS_SCHEMES = {
   light: {

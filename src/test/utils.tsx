@@ -6,7 +6,7 @@ import {
   RenderOptions,
 } from '@testing-library/react-native';
 
-import { THEME } from '@/shared/constants/theme';
+import { THEME } from '@/shared/constants';
 import { storeResetFns } from './__mocks__';
 
 QueryClient.prototype.prefetchQuery = jest.fn();

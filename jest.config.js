@@ -18,12 +18,16 @@ module.exports = {
     'src/**/*.{ts,tsx}',
     '!src/**/store/**',
     '!src/**/stores/**',
+    '!src/**/constants/**',
+    '!src/**/services/**',
     '!src/**/@types/**',
     '!src/**/types/**',
     '!src/app/**',
     '!src/assets/**',
     '!src/navigators/**',
     '!src/services/**',
+    '!**/index.ts',
+    '!/**/test/**',
   ],
   coverageThreshold: {
     global: {

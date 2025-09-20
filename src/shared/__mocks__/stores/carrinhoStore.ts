@@ -1,5 +1,5 @@
-import { CarrinhoStore, carrinhoStore } from '@/shared/stores';
-import { mockedStore } from '@/test/__mocks__';
+import { carrinhoStore, CarrinhoStore } from '../../stores';
+import { mockedStore } from './store';
 
 export const mockedCarrinhoStore = (storeValues?: Partial<CarrinhoStore>) =>
   mockedStore({

@@ -1,5 +1,5 @@
 import { ProdutoDoCarrinho } from '@/shared/types';
-import { Produto } from '../../services/api';
+import { Produto } from '../types';
 
 export const MOCKED_PRODUTOS: Produto[] = [
   {

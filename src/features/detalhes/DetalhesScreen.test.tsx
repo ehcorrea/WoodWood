@@ -2,8 +2,8 @@ import { fireEvent } from '@testing-library/react-native';
 import * as navigation from '@react-navigation/native';
 
 import { render } from '@/test/utils';
-import { criarMockProduto, mockedCarrinhoStore } from '@/test/__mocks__/';
-import { Produto } from '@/services/api';
+import { Produto } from '@/shared/types';
+import { criarMockProduto, mockedCarrinhoStore } from '@/shared/__mocks__';
 
 import * as useDetalhesProduto from './hooks/useDetalhesProduto/useDetalhesProduto';
 

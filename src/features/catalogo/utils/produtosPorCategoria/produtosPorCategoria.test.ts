@@ -1,4 +1,5 @@
-import { criarMockProduto } from '@/test/__mocks__';
+import { criarMockProduto } from '@/shared/__mocks__';
+
 import { produtosPorCategoria } from './produtosPorCategoria';
 
 describe('produtosEmCategoria', () => {

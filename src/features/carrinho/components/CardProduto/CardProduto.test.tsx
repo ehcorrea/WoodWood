@@ -1,6 +1,7 @@
 import { fireEvent } from '@testing-library/react-native';
 
-import { criarMockProdutoDoCarrinho, render } from '@/test/utils';
+import { render } from '@/test/utils';
+import { criarMockProdutoDoCarrinho } from '@/shared/__mocks__';
 
 import { CardProduto } from './CardProduto';
 
