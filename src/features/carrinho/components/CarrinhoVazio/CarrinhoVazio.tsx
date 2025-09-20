@@ -1,4 +1,4 @@
-import { FiguraEmptyList } from '@/assets/images';
+import { FiguraEmptyList } from '../../assets/images';
 
 import * as S from './CarrinhoVazio.styles';
 

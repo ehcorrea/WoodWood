@@ -1,4 +1,4 @@
-import { IconBack } from '@/assets/icons';
+import { IconBack } from '../../assets/icons';
 
 import * as S from './BotaoVoltar.styles';
 

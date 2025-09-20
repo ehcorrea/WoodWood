@@ -34,7 +34,7 @@ exports[`<CarrinhoVazio/> quando renderizado 1`] = `
       resizeMode="contain"
       source={
         {
-          "testUri": "../../../src/assets/images/figure-empty-list.png",
+          "testUri": "../../../src/features/carrinho/assets/images/figure-empty-list.png",
         }
       }
       style={

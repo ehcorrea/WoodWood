@@ -1,7 +1,8 @@
 import { Keyframe, LinearTransition } from 'react-native-reanimated';
 
-import { IconCart } from '@/assets/icons';
 import { Text } from '@/shared/components';
+
+import { IconCart } from '../../assets/icons';
 
 import * as S from './Carrinho.styles';
 

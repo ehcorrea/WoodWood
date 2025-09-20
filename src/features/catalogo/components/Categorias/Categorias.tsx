@@ -1,8 +1,8 @@
 import { FlatList, TouchableOpacity } from 'react-native';
 
-import { IconClose } from '@/assets/icons';
 import { Spacing } from '@/shared/components';
 
+import { IconClose } from '../../assets/icons';
 import { catalogoStore } from '../../store';
 import { Pill } from '../Pill/Pill';
 

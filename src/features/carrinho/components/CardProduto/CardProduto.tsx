@@ -2,7 +2,8 @@ import { TouchableOpacity } from 'react-native';
 
 import { ProdutoDoCarrinho } from '@/shared/types';
 import { Spacing, Text } from '@/shared/components';
-import { IconAdd, IconRemove } from '@/assets/icons';
+
+import { IconAdd, IconRemove } from '../../assets/icons';
 
 import * as S from './CardProduto.styles';
 
