@@ -11,9 +11,7 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "src/@types/expo-env.d.ts",
     "commitlint.config.js",
-    "expo-env.d.ts"
-  ]
+  ],
+  "exclude": ["**/__mocks__/*"],
 }

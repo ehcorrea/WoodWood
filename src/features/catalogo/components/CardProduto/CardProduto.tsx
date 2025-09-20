@@ -1,4 +1,4 @@
-import { Produto } from '@/services/api';
+import { Produto } from '@/shared/types';
 import { Text } from '@/shared/components';
 
 import * as S from './CardProduto.styles';
@@ -11,7 +11,7 @@ export function CardProduto({ produto }: CardProdutoProps) {
   return (
     <S.Wrapper>
       <S.ContainerPreco>
-        <S.Preco weight="semibold" maxFontSizeMultiplier={1}>
+        <S.Preco weight="semibold" maxFontSizeMultiplier={1.4}>
           R$ {produto.price}
         </S.Preco>
       </S.ContainerPreco>
@@ -21,7 +21,13 @@ export function CardProduto({ produto }: CardProdutoProps) {
         {'\n'}
       </S.Titulo>
       <S.FakeButton>
-        <Text palette="white" size="large" weight="semibold">
+        <Text
+          numberOfLines={1}
+          adjustsFontSizeToFit
+          palette="white"
+          size="large"
+          weight="semibold"
+        >
           Ver detalhes
         </Text>
       </S.FakeButton>

@@ -15,9 +15,9 @@ exports[`<CardProduto/> quando renderizado 1`] = `
         "flexBasis": 0,
         "flexGrow": 1,
         "flexShrink": 1,
-        "height": 230,
         "justifyContent": "space-between",
         "marginHorizontal": 5,
+        "minHeight": 230,
         "overflow": "hidden",
         "shadowColor": "#000",
         "shadowOffset": {
@@ -35,18 +35,21 @@ exports[`<CardProduto/> quando renderizado 1`] = `
     style={
       [
         {
-          "alignItems": "center",
-          "justifyContent": "center",
-          "left": "-17%",
-          "paddingVertical": 3,
+          "backgroundColor": "yellow",
+          "left": "-28%",
+          "minHeight": "10%",
+          "paddingBottom": 5,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 5,
           "position": "absolute",
-          "right": "50%",
-          "top": "8%",
+          "top": "10%",
           "transform": [
             {
-              "rotate": "-45deg",
+              "rotate": "-47deg",
             },
           ],
+          "width": "100%",
           "zIndex": 1,
         },
         undefined,
@@ -54,7 +57,7 @@ exports[`<CardProduto/> quando renderizado 1`] = `
     }
   >
     <Text
-      maxFontSizeMultiplier={1}
+      maxFontSizeMultiplier={1.4}
       style={
         [
           {
@@ -65,11 +68,7 @@ exports[`<CardProduto/> quando renderizado 1`] = `
           },
           [
             {
-              "backgroundColor": "yellow",
-              "height": 25,
-              "lineHeight": 25,
               "textAlign": "center",
-              "width": "100%",
             },
             undefined,
           ],
@@ -114,10 +113,10 @@ exports[`<CardProduto/> quando renderizado 1`] = `
         },
         [
           {
-            "paddingBottom": 10,
+            "paddingBottom": 0,
             "paddingLeft": 10,
             "paddingRight": 10,
-            "paddingTop": 10,
+            "paddingTop": 0,
           },
           undefined,
         ],
@@ -134,10 +133,12 @@ exports[`<CardProduto/> quando renderizado 1`] = `
         {
           "alignItems": "center",
           "backgroundColor": "#EA5B0C",
-          "paddingBottom": 5,
+          "justifyContent": "center",
+          "minHeight": 30,
+          "paddingBottom": 2,
           "paddingLeft": 5,
           "paddingRight": 5,
-          "paddingTop": 5,
+          "paddingTop": 2,
           "width": "100%",
         },
         undefined,
@@ -145,6 +146,8 @@ exports[`<CardProduto/> quando renderizado 1`] = `
     }
   >
     <Text
+      adjustsFontSizeToFit={true}
+      numberOfLines={1}
       palette="white"
       size="large"
       style={
