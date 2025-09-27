@@ -1,6 +1,6 @@
 # WoodWood
 
-Esse é um projeto com o intuido de criar um mini-app de e-commerce com React Native Bare.
+Esse é um projeto com o intuido de criar um mini-app de e-commerce com React Native Bare para [MadeiraMadeira](https://www.madeiramadeira.com.br/).
 
 ## Requisitos Técnicos(Obrigatórios)
 
