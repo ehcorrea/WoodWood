@@ -14,9 +14,9 @@ O projeto não possui **Expo SDK** e nenhuma de suas bibliotecas. Sendo iniciado
 
 ### Feature-based Folders
 
-A estrutura de pastas segue por **Features** e **Shared**. Sendo **@types**, **@types**, **services** e **navigators**, separadas dessa definição.
+A estrutura de pastas segue por **Features** e **Shared**. Sendo **@types**, **services** e **navigators**, separadas dessa definição.
 
-### Feature-based Folders
+### Testes unitários
 
 As 3 features principais(Catalogo, Detalhes e Carrinho) contam com Testes unitários em todos os arquivos. Utilizando Mocks e Snapshots quando necessário.
 
